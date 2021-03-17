@@ -1,1 +1,1 @@
-# Computercraft scripts created by @Potatoes and @Frityet
+# Computercraft scripts created by @Potatoes1286 and @Frityet
