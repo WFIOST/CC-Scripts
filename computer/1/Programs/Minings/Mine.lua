@@ -1,9 +1,6 @@
 --Variables for the size of the mined area
 local mx, my, mz;
 
---idk? Potatoes pls
-local l = 0;
-
 ---Refuels the turtle
 ---@param fuelLocation number
 ---@param refuelPercentage number
@@ -118,46 +115,36 @@ local function digDown()
     turtle.down();
 end
 
+local function MineUpnDown()
+    for z = 0, mz, 1 do
+        mineUp();
+    end
+
+    mineForward();
+
+    for z = mz, 0, -1 do
+        digDown();
+    end
+end
+
 initialiseArgs(3, false);
 
 print("Started mining program!");
 PotatoesSays("I NEED TO FUCKING SHIT!!!!!");
 FrityetSays("We have peaked");
 
-for y = 0, my, 1 do
-    for x = 0, mx, 1 do
-        for z = 0, mz, 1 do
-            mineUp();
-        end
-
-        mineForward();
-
-        for z = mz, 0, -1 do
-            digDown();
-        end
-        mineForward();
+for y = 0, my, 2 do
+    for x = 0, mx, 2 do
+        MineUpnDown();
     end
-    for x = mx, 0, -1 do
-        turtle.back();
-    end
-
     turtle.turnRight();
-    turtle.dig();
-    l = l + 1;
-    turtle.up();
-    turtle.dig();
-    l = l + 1;
-    turtle.down();
-    if isfull() == true then
-        turtle.select(0);
-        turtle.placeUp();
-        for x = 5, 17, 1 do
-            turtle.select(x);
-            turtle.dropUp();
-        end
+    turtle.mineForward();
+    turtle.turnRight();
+    for x = 0, mx, 2 do
+        MineUpnDown();
     end
-    turtle.forward();
     turtle.turnLeft();
-
+    turtle.mineForward();
+    turtle.turnLeft();
 end
 
