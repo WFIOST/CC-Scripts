@@ -91,27 +91,20 @@ function FrityetSays(message)
 end
 
 ---Mines upwards, adds one to l, and moves up
----@return number l
 local function mineUp()
     turtle.digUp();
-    l = l + 1;
     turtle.up();
-    return l;
 end
 
 ---Mines forward, adds one to l, and moves forward
----@return number l
 local function mineForward()
     turtle.dig()
-    l = l + 1;
     turtle.forward();
 end
 
 ---Mines down, adds one to l, and moves down
----@return number l
 local function digDown()
     turtle.digDown();
-    l = l + 1;
     turtle.down();
 end
 
