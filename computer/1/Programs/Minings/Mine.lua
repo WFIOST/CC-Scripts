@@ -131,13 +131,13 @@ for y = 0, my, 2 do
         MineUpnDown();
     end
     turtle.turnRight();
-    turtle.mineForward();
+    mineForward();
     turtle.turnRight();
     for x = 0, mx, 2 do
         MineUpnDown();
     end
     turtle.turnLeft();
-    turtle.mineForward();
+    mineForward();
     turtle.turnLeft();
 end
 
