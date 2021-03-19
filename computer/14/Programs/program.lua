@@ -6,5 +6,5 @@ print("metallurgic_infuser WRAPPED!");
 print("Methods:\n\n")
 
 for method, i in pairs(MetalInfuser) do
-    print(method);
+    print(i .. " " .. method);
 end
