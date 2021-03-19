@@ -7,7 +7,7 @@ print("Methods:\n\n")
 
 for k, v in pairs(MetalInfuser) do
     print(v);
-    print(k);
+    print("Function name: " .. k);
     print();
 end
 
@@ -18,3 +18,5 @@ for k, v in pairs(MetalInfuser.list()) do
 end
 
 print(MetalInfuser.getEnergy());
+print(MetalInfuser.size());
+print(MetalInfuser.getItemDetail());
