@@ -5,6 +5,6 @@ print("metallurgic_infuser WRAPPED!");
 
 print("Methods:\n\n")
 
-for method, i in pairs(MetalInfuser) do
-    print(i .. " " .. method);
+for k, v in pairs(MetalInfuser) do
+    print(v);
 end
