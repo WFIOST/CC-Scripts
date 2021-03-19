@@ -11,5 +11,10 @@ for k, v in pairs(MetalInfuser) do
     print();
 end
 
-print(MetalInfuser.list());
+for k, v in pairs(MetalInfuser.list()) do
+    print(v);
+    print(k);
+    print();
+end
+
 print(MetalInfuser.getEnergy());
