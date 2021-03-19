@@ -129,6 +129,7 @@ FrityetSays("We have peaked");
 for y = 0, my, 2 do
     for x = 0, mx, 2 do
         MineUpnDown();
+        mineForward();
     end
     turtle.turnRight();
     mineForward();
