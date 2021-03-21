@@ -1,6 +1,6 @@
-local MetalInfuser = peripheral.find("mekanism:metallurgic_infuser");
+local MetalInfuser = peripheral.find("BigReactors-Reactor");
 
-print("metallurgic_infuser WRAPPED!");
+print("Reactor WRAPPED!");
 
 
 print("Methods:\n\n")
@@ -11,5 +11,3 @@ for k, v in pairs(MetalInfuser) do
     print();
 end
 
-print(MetalInfuser.getEnergy());
-print(MetalInfuser.size());
