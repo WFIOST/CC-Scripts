@@ -11,14 +11,11 @@ print("modem WRAPPED!");
 
 print("Methods:\n\n")
 
-local methods = {};
-
+local methods = {}
 for k, v in pairs(Reactor) do
-    print(v);
-    print("Function name: " .. k);
-    print();
-
-    methods[k] = v;
+  if type(v) == "function" then -- so we don't get any other things that might cause errors
+    methods[#methods + 1] = k
+  end
 end
 
 
