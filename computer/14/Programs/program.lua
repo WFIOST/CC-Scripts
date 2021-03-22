@@ -23,4 +23,4 @@ Modem.open(Ports.TRANSMIT);
 
 Modem.open(Ports.RECIVE);
 
-Modem.transmit(Ports.TRANSMIT, Ports.RECIVE, "Hello World!");
+Modem.transmit(Ports.TRANSMIT, Ports.RECIVE, Reactor);
