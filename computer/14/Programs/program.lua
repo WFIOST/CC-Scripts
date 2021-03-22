@@ -11,10 +11,14 @@ print("modem WRAPPED!");
 
 print("Methods:\n\n")
 
+local methods = {};
+
 for k, v in pairs(Reactor) do
     print(v);
     print("Function name: " .. k);
     print();
+
+    methods[k] = v;
 end
 
 
@@ -23,4 +27,4 @@ Modem.open(Ports.TRANSMIT);
 
 Modem.open(Ports.RECIVE);
 
-Modem.transmit(Ports.TRANSMIT, Ports.RECIVE, Reactor);
+Modem.transmit(Ports.TRANSMIT, Ports.RECIVE, methods);
