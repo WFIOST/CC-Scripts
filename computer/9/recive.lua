@@ -12,4 +12,10 @@ modem.open(Ports.TRANSMIT);
 
 local msgArgs = {os.pullEvent("modem_message")}
 
-print(msgArgs[5]);
+
+
+for k, v in pairs(msgArgs[5])
+do
+    print(v);
+    print();
+end
