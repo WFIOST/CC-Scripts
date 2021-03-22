@@ -17,4 +17,13 @@ do
     print(k);
     print(v);
     print();
+
+    if k == 5 then
+        for i, j in pairs(v)
+        do
+            print(i);
+            print(j);
+            print();
+        end
+    end
 end
