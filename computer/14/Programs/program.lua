@@ -1,3 +1,9 @@
+local Ports = 
+{
+    TRANSMIT = 420,
+    RECIVE = 69
+}
+
 local Reactor = peripheral.find("BigReactors-Reactor");
 print("Reactor WRAPPED!");
 local Modem = peripheral.find("modem");
@@ -11,14 +17,10 @@ for k, v in pairs(Reactor) do
     print();
 end
 
-local ports = 
-{
-    TRANSMIT = 420,
-    RECIVE = 69
-}
 
-Modem.open(ports.TRANSMIT);
 
-Modem.open(ports.RECIVE);
+Modem.open(Ports.TRANSMIT);
 
-Modem.transmit(ports.TRANSMIT, ports.RECIVE, "Hello World!");
+Modem.open(Ports.RECIVE);
+
+Modem.transmit(Ports.TRANSMIT, Ports.RECIVE, "Hello World!");
