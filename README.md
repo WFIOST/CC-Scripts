@@ -1,1 +1,2 @@
-# Computercraft scripts created by @Potatoes1286 and @Frityet
+# CC-Scripts
+Some scripts used on my modded mc server
