@@ -1,6 +1,6 @@
 local common = require("common");
 
-local URL<const> = "192.168.1.86:5001/productionline/";
+local URL<const> = "localhost:5001/productionline/";
 
 local export = {}
 
@@ -65,7 +65,6 @@ end
 function export.get_factory(name)
     local req_url = URL .. name;
     http.request(req_url);
-    print("Finding factory " .. name .. "...")
     local event, url, handle;
     repeat
         io.write("Loading\r");
@@ -77,13 +76,14 @@ function export.get_factory(name)
     return export.from_json_table(textutils.unserialiseJSON(handle.readAll()));
 end
 
----Gets a factory from the API
----@param name string
+---Adds a factory to the database
 ---@param factory ProductionLine
-function export.set_factory(name, factory)
+function export.add_factory(factory)
     local req_url = URL .. name;
-    http.request(req_url);
-    print("Finding factory " .. name .. "...")
+    http.request {
+        url = name,
+        postData = textutils.serialiseJSON(factory)
+    };
     local event, url, handle;
     repeat
         io.write("Loading\r");
